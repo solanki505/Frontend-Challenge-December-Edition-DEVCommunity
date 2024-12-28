@@ -1,0 +1,201 @@
+body {
+    margin: 2vw;
+    padding: 2vw;
+    background: linear-gradient(to bottom, #000000,rgb(12, 72, 114),rgb(22, 111, 114), #010c2d);
+}
+section{
+    display: grid;
+}
+.snowflake {
+    position: absolute;
+    top: -10px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.1;
+    animation: fall 10s linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh);
+    }
+}
+@-webkit-keyframes Blink {
+    50% {
+        filter: brightness(130%);
+    }
+}
+
+@-moz-keyframes Blink {
+    50% {
+        filter: brightness(130%);
+    }
+}
+
+@keyframes Blink {
+    50% {
+        filter: brightness(130%);
+    }
+}
+.ico{
+    height: 150px;
+     width: 150px;
+}
+
+
+
+ .show {
+    display: block; /* or flex, inline-block, etc. */
+    opacity: 1; /* Ensure opacity is set to visible */
+    transition: opacity 0.5s ease; /* Optional: for smooth transition */
+}
+.hidden {
+    display: none; /* or visibility: hidden; */
+    transition: all 1s;
+    filter:blur(5px);
+    transform: translateX(-100%);
+}
+.view {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .block {
+    height: 200px;
+    width: 300px;
+    margin: 50px;}
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+      clip-path: inset(100% 100% 0 0);
+    }
+    to {
+      opacity: 1;
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  .block {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+  }
+
+  .block {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  
+#seller{
+    cursor:pointer; 
+    transition:all 0.3s ease-in-out;
+    justify-content: space-around;
+    position: relative;
+ }
+ #seller:after{
+    content: "";
+    position: absolute;
+    background-color:rgb(148, 179, 181) ;
+    height: 0;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    padding: 0 10px;
+    transition: 0.3s;
+
+ }
+ #seller:hover{
+     color:rgb(148, 179, 181) ;
+     font-weight: bolder;
+     background: var(--main-bg-color);
+ }
+ #seller:hover:after{
+    width: 100%;
+    height: 3px;
+ }
+
+
+
+ #sign{
+    cursor:pointer; 
+    transition:all 0.3s ease-in-out;
+    justify-content: space-around;
+    position: relative;
+ }
+ #sign:after{
+    content: "";
+    position: absolute;
+    background-color: rgb(148, 179, 181) ;
+    height: 0;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    padding: 0 10px;
+    transition: 0.3s;
+ }
+ #sign:hover{
+     color:rgb(148, 179, 181) ;
+     font-weight: bolder;
+     background: var(--main-bg-color);
+ }
+
+ #sign:hover:after{
+    width: 100%;
+    height: 3px;
+ }
+ .typing {
+    display: inline-block;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    font-size: 50px;
+    animation: typing 3s steps(20, end), colorChange 3s ease-in-out infinite;
+}
+
+.cursor {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(204, 240, 0);
+    animation: blink 0.7s infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes colorChange {
+
+    0%,
+    100% {
+        color: rgb(141, 199, 221);
+    }
+
+    50% {
+        color: rgba(169, 142, 156, 0.897);
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        background-color: transparent;
+    }
+
+    50% {
+        background-color: rgb(0, 0, 0);
+    }
+}
+.main-footer{
+    background-color: #010c2d;
+    display: flex;
+}
